@@ -4,37 +4,111 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     outline: none;
 }
 .body-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3C3275;
+
 }
 .generator-container{
     display: flex;
     flex-direction: column;
     padding: 10px;
     gap: 10px;
-    width: 50%;
-    height: 70%;
-    background-color: #dddddd;
+    width: 30%;
+    height: 50%;
+    background-color: #6453C2;
     border-radius: 6px;
-}
-#bt-generate{
-    width: 100%;
-    height: 35px;
-    border: none;
-    font-size: 1.2em;
-    background-color: rgb(0, 174, 255);
-
-}
-#text-password{
-    font-size: 1.5em;
-    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.198);
 }
 h1{
     text-align: center;
+    font-size: max(1em, 2.5vw);
+    color: #e2dcff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.198);;
 
+}
+#input-password{
+    font-size: max(1em, 2vw);
+    font-weight: 500;
+    text-align: center;
+    height: 55px;
+    width: 100%;
+    border-radius: 4px;
+    border:none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+#copy{
+    display:flex;
+    gap: 4px;
+    color: #e2dcff;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 50%;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.198);
+    font-size: max(0.7em, 1.2vw);
+}
+#copy-img{
+    width: 25px;
+    filter :drop-shadow( 4px 4px 8px rgba(0, 0, 0, 0.452));
+    align-self: center;
+    
+
+}
+#bt-generate{
+    width: 100%;
+    height: 55px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 4px;
+    background-color:#BEB4F7;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: max(0.7em, 1.2vw);
+
+}
+#bt-generate:hover, #copy:hover{
+    opacity: 0.9;
+    user-select: none;
+}
+#bt-generate:active, #copy:active{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+    .generator-container{
+        width: 95%;
+        height: 95%;
+    }
+    h1{
+        font-size: max(1.7em, 8vw);
+    }
+    #input-password{
+        margin-top: 20px;
+        font-size: max(1em, 3vw);
+        height: max(55px, 10vw);
+    }
+    #bt-generate{
+        font-size: max(1em, 3.3vw);
+        height: max(55px, 10vw);
+        margin-top: 23px;
+    }
+    #copy{
+        margin-top: 23px;
+        font-size: max(0.7em, 3.3vw);
+        width: max(145px,50%);
+    }
+    #copy-img{
+        width: max(25px,5vw);
+    }
 }
